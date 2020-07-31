@@ -1,0 +1,10 @@
+[requires]
+boost/1.72.0
+
+[imports]
+bin, *.dll -> ./bin
+lib, *.so* -> ./lib
+lib, *.dylib* -> ./lib
+
+[options]
+boost:shared=False
