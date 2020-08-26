@@ -13,10 +13,17 @@ struct employee
   int         id;
   std::string name;
 
-  employee(int id,const std::string& name):id(id),name(name){}
+  employee(int id,const std::string& name): id(id), name(name){};
 
-  bool operator<(const employee& e)const{return id<e.id;}
+  bool operator<(const employee& e) const {return id<e.id;};
+
+  friend std::ostream& operator<<(std::ostream& os, const employee& e);
 };
+
+std::ostream& operator<<(std::ostream& os, const employee& e) 
+{
+  return (os << e.name << std::endl); 
+}
 
 // define a multiply indexed set with indices by id and name
 typedef multi_index_container<

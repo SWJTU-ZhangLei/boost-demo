@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(boost-demo)
 
+set(CMAKE_CXX_STANDARD 11)
+
 #参考路径
 #https://cmake.org/cmake/help/v3.8/module/FindBoost.html?highlight=boost
 set(Boost_NO_SYSTEM_PATHS ON)
