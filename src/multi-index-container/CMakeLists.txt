@@ -1,4 +1,5 @@
 if(Boost_FOUND)
   include_directories(${Boost_INCLUDE_DIRS})
   add_executable(multi-index-container-demo main.cpp)
+  install(TARGETS multi-index-container-demo RUNTIME DESTINATION bin)
 endif()
