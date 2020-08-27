@@ -10,7 +10,7 @@ set(BOOST_DEMO_VERSION_PATCH 0)
 
 set(CMAKE_CXX_STANDARD 11)
 
-option(BUILD_SHARED_LIBS "Option for generating dynamic or static library." ON)
+option(BUILD_SHARED_LIBS "Option for generating dynamic or static library." OFF)
 
 #参考路径
 #https://cmake.org/cmake/help/v3.8/module/FindBoost.html?highlight=boost
@@ -34,7 +34,8 @@ set(Boost_USE_STATIC_RUNTIME OFF)
 
 set(BOOST_ROOT third-parts/boost_1_73_0)
 
-find_package(boost 1.73.0 REQUIRED COMPONENTS regex)
+set(Boost_NO_BOOST_CMAKE ON) 
+find_package(Boost 1.73.0 MODULE REQUIRED COMPONENTS regex REQUIRED)
 
 message(STATUS "Boost_FOUND: ${Boost_FOUND}")
 
