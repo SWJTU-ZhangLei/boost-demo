@@ -1,12 +1,7 @@
 if(Boost_FOUND)
   include_directories(${Boost_INCLUDE_DIRS})
-
   link_directories(${Boost_LIBRARY_DIRS})
-
   add_executable(regex-demo main.cpp)
-
   target_link_libraries(regex-demo ${Boost_LIBRARIES})
-
   install(TARGETS regex-demo RUNTIME DESTINATION bin)
-
 endif()

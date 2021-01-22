@@ -1,0 +1,7 @@
+if(Boost_FOUND)
+  include_directories(${Boost_INCLUDE_DIRS})
+  link_directories(${Boost_LIBRARY_DIRS})
+  add_executable(asio-coroutine-demo main.cpp)
+  #target_link_libraries(asio-coroutine-demo ${Boost_LIBRARIES})
+  install(TARGETS asio-coroutine-demo RUNTIME DESTINATION bin)
+endif()
